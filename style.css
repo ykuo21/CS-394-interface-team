@@ -1,6 +1,5 @@
 body {
     background-color: #05195A;
- 
     height: 100vh; /* full height */
     display: flex;
     justify-content: center;
@@ -40,6 +39,7 @@ h2{
     display: flex;
     flex-direction: column; 
     gap: 20px; 
+    
 }
 
 .options button {
@@ -55,6 +55,7 @@ h2{
     cursor: pointer;
     box-shadow: 2px 1px;
     border-radius: 10px;
+    width: 250px;
 }
 
 .options button:hover{

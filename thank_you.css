@@ -1,0 +1,43 @@
+body {
+    background-color: #05195A;
+    height: 100vh; /* full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-square {
+    background-color: white;
+    width: 1000px;
+    height: 500px;
+    
+    border-radius: 20px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container img {
+    height: 150px;
+}
+
+.info {
+  padding-top: 100px;
+}
+
+
+h2 {  
+    font-size: 36px; 
+    font-weight: bold;
+    color: #05195A; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p.thank-you-text {
+    font-size: 18px;
+    color: #333;
+    margin: -20px;
+    
+}
+

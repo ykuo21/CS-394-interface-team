@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <link rel="stylesheet" href="./student.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main class="main_back">
+        <div id="rounded-box">
+            <img src="./assets/uic_logo.png" alt="uic logo">
+            <div class="info">
+
+                <p id="header"><b>Student Information</b></p>
+                <div id="user_inputs">
+                    
+
+                    <div class="column">
+                        <div class="row">
+
+                            <label for="myDropdown">Select your degree level:</label>
+                            <select id="myDropdown" name="options">
+                                <option value="" disabled selected>Select</option>
+                                <option value="undergrad">Undergraduate</option>
+                                <option value="grad">graduate</option>
+                            </select>
+                        </div>
+                        
+                        <div class="row">
+                            <label for="myDropdown">Select your college:</label>
+                            <select id="myDropdown" name="college">
+                                <option value="" disabled selected>Select</option>
+                                <option value="ahs">College of Applied Health Sciences</option>
+                                <option value="adaa">College of Architecture, Design, and the Arts</option>
+                                <option value="cba">College of Business Administration</option>
+                                <option value="dentistry">College of Dentistry</option>
+                                <option value="education">College of Education</option>
+                                <option value="engineering">College of Engineering</option>
+                                <option value="las">College of Liberal Arts and Sciences</option>
+                                <option value="medicine">College of Medicine</option>
+                                <option value="nursing">College of Nursing</option>
+                                <option value="pharmacy">College of Pharmacy</option>
+                                <option value="publichealth">School of Public Health</option>
+                                <option value="socialwork">Jane Addams College of Social Work</option>
+                                <option value="grad">Graduate College</option>
+                                <option value="honors">Honors College</option>
+                                <option value="cuppa">College of Urban Planning and Public Affairs</option>
+                                <option value="law">School of Law</option>
+                            </select>
+                        </div>
+
+
+                        <div class="row">
+                            <label for="majorDropdown">Select your major:</label>
+                            <select id="majorDropdown" name="major" required>
+                              <option value="" disabled selected>Select</option>
+                              <option value="accounting">Accounting</option>
+                              <option value="acting">Acting</option>
+                              <option value="anthropology">Anthropology</option>
+                              <option value="applied-psychology">Applied Psychology</option>
+                              <option value="architecture">Architecture</option>
+                              <option value="art">Art</option>
+                              <option value="art-history">Art History</option>
+                              <option value="biochemistry">Biochemistry</option>
+                              <option value="biological-sciences">Biological Sciences</option>
+                              <option value="biomedical-engineering">Biomedical Engineering</option>
+                              <option value="black-studies">Black Studies</option>
+                              <option value="business-admin">Business Administration</option>
+                              <option value="chemical-engineering">Chemical Engineering</option>
+                              <option value="chemistry">Chemistry</option>
+                              <option value="civil-engineering">Civil Engineering</option>
+                              <option value="communication">Communication</option>
+                              <option value="computer-engineering">Computer Engineering</option>
+                              <option value="computer-science">Computer Science</option>
+                              <option value="criminology">Criminology, Law, and Justice</option>
+                              <option value="data-science">Data Science</option>
+                              <option value="design-studies">Design Studies</option>
+                              <option value="economics">Economics</option>
+                              <option value="electrical-engineering">Electrical Engineering</option>
+                              <option value="english">English</option>
+                              <option value="entrepreneurship">Entrepreneurship</option>
+                              <option value="environmental-engineering">Environmental Engineering</option>
+                              <option value="finance">Finance</option>
+                              <option value="french">French and Francophone Studies</option>
+                              <option value="gender-studies">Gender and Women’s Studies</option>
+                              <option value="germanic-studies">Germanic Studies</option>
+                              <option value="global-asian-studies">Global Asian Studies</option>
+                              <option value="graphic-design">Graphic Design</option>
+                              <option value="health-info-mgmt">Health Information Management</option>
+                              <option value="history">History</option>
+                              <option value="human-dev-learning">Human Development and Learning</option>
+                              <option value="industrial-design">Industrial Design</option>
+                              <option value="industrial-engineering">Industrial Engineering</option>
+                              <option value="information-systems">Information and Decision Sciences</option>
+                              <option value="integrated-health">Integrated Health Studies</option>
+                              <option value="international-studies">International Studies</option>
+                              <option value="italian-studies">Italian and Italian American Studies</option>
+                              <option value="jazz-studies">Jazz Studies</option>
+                              <option value="kinesiology">Kinesiology</option>
+                              <option value="latin-american-studies">Latin American and Latino Studies</option>
+                              <option value="liberal-studies">Liberal Studies</option>
+                              <option value="management">Management</option>
+                              <option value="marketing">Marketing</option>
+                              <option value="math">Mathematics</option>
+                              <option value="math-cs">Mathematics and Computer Science</option>
+                              <option value="mechanical-engineering">Mechanical Engineering</option>
+                              <option value="music">Music</option>
+                              <option value="neuroscience">Neuroscience</option>
+                              <option value="nursing">Nursing</option>
+                              <option value="nutrition">Nutrition</option>
+                              <option value="philosophy">Philosophy</option>
+                              <option value="physics">Physics</option>
+                              <option value="political-science">Political Science</option>
+                              <option value="psychology">Psychology</option>
+                              <option value="public-health">Public Health</option>
+                              <option value="public-policy">Public Policy</option>
+                              <option value="real-estate">Real Estate</option>
+                              <option value="rehab-sciences">Rehabilitation Sciences</option>
+                              <option value="sociology">Sociology</option>
+                              <option value="spanish">Spanish</option>
+                              <option value="statistics">Statistics</option>
+                              <option value="teaching-english">Teaching of English</option>
+                              <option value="teaching-math">Teaching of Mathematics</option>
+                              <option value="theatre">Theatre</option>
+                              <option value="urban-education">Urban Education</option>
+                              <option value="urban-studies">Urban Studies</option>
+                            </select>
+                        </div>
+        
+                        
+                    </div>
+
+                    <div class="column">
+
+                        <div class="row">
+                            <p id="labels-right">Expected Graduation:</p>
+                            <input type="text">
+                        </div>
+
+                        <div class="row">
+
+                            <label for="myDropdown">Select tools you need access to:</label>
+                            <select id="myDropdown" name="tools">
+                                <option value="" disabled selected>Select</option>
+                                <option value="bb">blackboard</option>
+                                <option value="grad">xyz</option>
+                            </select>
+                        </div>
+
+                    
+                    </div>
+                
+                </div>
+
+            </div>
+            
+            
+            <a href="thank_you.html">
+                <button>→</button>
+              </a>
+  
+        </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
