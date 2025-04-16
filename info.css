@@ -1,0 +1,96 @@
+#rounded-box {
+    background-color: white;
+    border-radius: 20px;
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: relative;
+}
+
+body{
+    background-color: #05195A;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    display: flex;
+    height: 100px;
+    width:100px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#header{
+    font-size: medium;
+    margin-right: 700px;
+    padding-top: 20px;
+}
+
+/* #user_inputs {
+    font-size: small;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 65px; 
+    padding-top: 5px;
+} */
+
+#user_inputs {
+    font-size: small;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-left: 65px;
+    margin-right: 65px;
+    padding-top: 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+#labels-right{
+    margin-right: 800px;
+    white-space: nowrap;
+}
+
+input{
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    border-radius: 7px;
+}
+
+option{
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    border-radius: 7px;
+}
+
+button{
+    background-color: red;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #05195A;
+    color: white;
+    border-radius: 10px;
+    
+}

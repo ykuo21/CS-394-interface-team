@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <link rel="stylesheet" href="./info.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main class="main_back">
+        <div id="rounded-box">
+            <img src="./assets/uic_logo.png" alt="uic logo">
+            <p id="header"><b>Enter your Information</b></p>
+            <div id="user_inputs">
+
+              <div class="column">
+                <div class="row">
+                  <p id="labels-left">First Name:</p>
+                  <input type="text">
+                </div>
+                
+                <div class="row">
+                  <p id="labels-left">Email (UIC Only):</p>
+                  <input type="text">
+                </div>
+  
+                <form>
+                  <label for="cars">Are you a Student or an Employee?</label>
+                  <br><br>
+                  <select>
+                    <option>Select</option>
+                    <option>Student</option>
+                    <option>Employee</option>
+                   
+                  </select>
+              
+                </form>
+              </div>
+
+              <div class="column">
+                <div id="user_inputs_right">
+                  <p id="labels-right">Last Name:</p>
+                  <input type="text">
+                </div>
+
+                <div id="user_inputs_right">
+                  <p id="labels-right">NetID:</p>
+                  <input type="text">
+                </div>
+              </div>
+              
+            </div>
+            
+            <button>→</button>
+  
+        </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
