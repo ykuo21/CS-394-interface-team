@@ -16,7 +16,6 @@
 
                 <p id="header"><b>Employee Information</b></p>
                 <div id="user_inputs">
-                    
 
                     <form id="userForm" action="thank_you.html" onsubmit="return validateForm()">
                         <div id="user_inputs">
@@ -44,7 +43,12 @@
                     
                             <div class="column">
                                 <div class="row">
-                                    <p id="labels-right">Hire Year:</p>
+
+                                    <div class="input-container">
+                                        <p id="labels-right">Hire Year:</p>
+                                        <span class="error-message" id="errorHireYear"></span>
+                                    </div>
+                                    
                                     <input type="text" id="hireYear" name="hireYear" required pattern="\d{4}" title="Enter a valid year (e.g. 2022)">
                                 </div>
                     

@@ -69,6 +69,7 @@ input {
     height: 20px; 
     border-radius: 7px;
     border: 1px solid #ccc; 
+    width: 165px;
 }
 
 
@@ -107,3 +108,20 @@ label {
     color: #333;
     margin-bottom: 8px;
   }
+
+.input-error {
+    border: 2px solid red !important;
+}
+
+.input-container {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    /* white-space: nowrap; */
+}

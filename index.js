@@ -4,11 +4,20 @@ const users = [
     // { username: "charlie", email: "charlie@email.com", password: "pass456" }
   ];
 
-  function checkForm() {
+  function checkForm(event) {
+    event.preventDefault();
     const firstName = document.getElementById("firstNameInput").value.trim();
     const lastName = document.getElementById("lastNameInput").value.trim();
     const email = document.getElementById("emailInput").value.trim();
     const netID = document.getElementById("netIDInput").value;
+
+    const role = document.getElementById("myDropdown").value;
+
+    // if (!role) {
+    //     alert("Please select Student or Employee.");
+    //     return false; // prevents redirection
+    //   }
+
     // const message = document.getElementById("message");
 
     const match = users.find(user =>
@@ -99,8 +108,13 @@ const users = [
             }
     }
     if (!hasError) {
-        window.location.href = "student.html";
-      }
+        if (role === "Student") {
+            window.location.href = "student.html";
+        } else if (role === "Employee") {
+            window.location.href = "employee.html";
+        }
+    }
+
     // if (match) {
     // //   message.textContent = `Welcome, ${match.username}!`;
     // //   message.className = "message success";

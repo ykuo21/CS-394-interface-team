@@ -17,7 +17,7 @@
                 <p id="header"><b>Student Information</b></p>
                 <div id="user_inputs">
 
-                    <form id="studentForm" action="thank_you.html" method="GET">
+                    <form id="studentForm" action="thank_you.html" method="GET" onsubmit="return validateForm()">
 
                         <div id="user_inputs">
 
@@ -57,8 +57,12 @@
                             <div class="column">
         
                                 <div class="row">
-                                    <p id="labels-right">Expected Graduation:</p>
-                                    <input type="text" required>
+                                    <div class="input-container">
+                                        <p id="labels-right">Expected Graduation:</p>
+                                        <span class="error-message" id="errorGradYear"></span>
+                                    </div>
+                                    <!-- <p id="labels-right">Expected Graduation:</p> -->
+                                    <input type="text" id="gradYearInput" required>
                                 </div>
         
                                 <div class="row">

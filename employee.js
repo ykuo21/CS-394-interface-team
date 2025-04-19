@@ -49,18 +49,44 @@ function updateJobTitles() {
 function validateForm() {
     const college = document.getElementById('collegeDropdown').value;
     const job = document.getElementById('jobDropdown').value;
-    const hireYear = document.getElementById('hireYear').value;
+    // const hireYear = document.getElementById('hireYear').value;
+    const hireYearInput = document.getElementById('hireYear'); // actual element
+    const hireYear = hireYearInput.value;
     const tool = document.getElementById('myDropdown').value;
 
+    let hasError = false;
+
     if (!college || !job || !hireYear || !tool) {
+        hasError = true;
         alert('Please fill out all required fields.');
         return false;
     }
 
     if (!/^\d{4}$/.test(hireYear)) {
+        hasError = true;
         alert("Please enter a valid 4-digit hire year.");
         return false;
     }
+
+  
+    if (parseInt(hireYear) == 2022) {
+        hasError = false;
+        hireYearInput.classList.remove("input-error");
+        document.getElementById("errorHireYear").textContent = "";
+    } else {
+        hasError = true;
+        hireYearInput.classList.add("input-error");
+        document.getElementById("errorHireYear").textContent = "No match found for hire year";
+        return false;
+    }
+
+    if (!hasError) {
+       
+        window.location.href = "thank_you.html";
+        
+    }
+
+    
 
     return true; 
 }

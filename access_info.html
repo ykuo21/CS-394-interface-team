@@ -14,8 +14,9 @@
             <img src="./assets/uic_logo.png" alt="uic logo">
 
             <div class="info">
-              <p id="header"><b>Enter your Information</b></p>
-              <div id="user_inputs">
+              <form onsubmit="checkForm(event)">
+                <p id="header"><b>Enter your Information</b></p>
+                <div id="user_inputs">
 
                 <div class="column">
                   <div class="row">
@@ -42,10 +43,10 @@
                   <div class="row">
 
                     <label for="myDropdown">Are you a Student or an Employee?</label>
-                    <select id="myDropdown" name="options">
+                    <select id="myDropdown" name="options" required>
                         <option value="" disabled selected>Select</option>
-                        <option value="undergrad">Student</option>
-                        <option value="grad">Employee</option>
+                        <option value="Student">Student</option>
+                        <option value="Employee">Employee</option>
                     </select>
                   </div>
   
@@ -64,20 +65,25 @@
 
                   <div id="user_inputs_right">
                     <div class="input-container">
-                      <p id="labels-right">NetID:</p>
-                      <span class="error-message" id="errorLastName"></span>
+                      <p id="labels-right">UIN:</p>
+                      <span class="error-message" id="errorNetID"></span>
                     </div>
                     
                     <input id="netIDInput" type="text">
                     <!-- <p id="messageNetID"></p> -->
                   </div>
                 </div>
+
+                <button type="submit">→</button>
+
+              </form>
+              
                 
-              </div>
+            </div>
           </div>
             
           <!-- <a href="student.html"> -->
-            <button onclick="checkForm()">→</button>
+            <!-- <button onclick="checkForm()">→</button> -->
           <!-- </a> -->
   
         </div>

@@ -29,7 +29,7 @@ function updateMajors() {
     const collegeSelect = document.getElementById("myDropdown");
     const majorSelect = document.getElementById("majorDropdown");
     const selectedCollege = collegeSelect.value;
-
+    
     
     majorSelect.innerHTML = '<option value="" disabled selected>Select</option>';
 
@@ -42,4 +42,32 @@ function updateMajors() {
             majorSelect.appendChild(option);
         });
     }
+
+
+}
+
+function validateForm(){
+    const gradYearInput = document.getElementById('gradYearInput'); // actual element
+    const gradYear = gradYearInput.value;
+
+    let hasError = false;
+
+    if (parseInt(gradYear) > 2022) {
+        hasError = false;
+        gradYearInput.classList.remove("input-error");
+        document.getElementById("errorGradYear").textContent = "";
+    } else {
+        hasError = true;
+        gradYearInput.classList.add("input-error");
+        document.getElementById("errorGradYear").textContent = "No match found for hire year";
+        return false;
+    }
+
+    if (!hasError) {
+       
+        window.location.href = "thank_you.html";
+        
+    }
+
+
 }
