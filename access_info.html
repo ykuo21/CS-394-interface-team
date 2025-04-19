@@ -19,13 +19,24 @@
 
                 <div class="column">
                   <div class="row">
-                    <p id="labels-left">First Name:</p>
-                    <input type="text">
+                    <div class="input-container">
+                      <p id="labels-left">First Name:</p>
+                      <span class="error-message" id="errorFirstName"></span>
+                    </div>
+          
+                    <input id="firstNameInput" type="text">
+      
+                    <!-- <p id="messageFirstName"></p> -->
                   </div>
                   
                   <div class="row">
-                    <p id="labels-left">Email (UIC Only):</p>
-                    <input type="text">
+                    <div class="input-container">
+                      <p id="labels-left">Email (UIC Only):</p>
+                      <span class="error-message" id="errorEmail"></span>
+                    </div>
+                   
+                    <input id="emailInput" type="text">
+                    <!-- <p id="messageEmail"></p> -->
                   </div>
 
                   <div class="row">
@@ -42,22 +53,32 @@
 
                 <div class="column">
                   <div id="user_inputs_right">
-                    <p id="labels-right">Last Name:</p>
-                    <input type="text">
+                    <div class="input-container">
+                      <p id="labels-right">Last Name:</p>
+                      <span class="error-message" id="errorLastName"></span>
+                    </div>
+                    
+                    <input id="lastNameInput" type="text">
+                    <!-- <p id="messageLastName"></p> -->
                   </div>
 
                   <div id="user_inputs_right">
-                    <p id="labels-right">NetID:</p>
-                    <input type="text">
+                    <div class="input-container">
+                      <p id="labels-right">NetID:</p>
+                      <span class="error-message" id="errorLastName"></span>
+                    </div>
+                    
+                    <input id="netIDInput" type="text">
+                    <!-- <p id="messageNetID"></p> -->
                   </div>
                 </div>
                 
               </div>
           </div>
             
-          <a href="student.html">
-            <button>→</button>
-          </a>
+          <!-- <a href="student.html"> -->
+            <button onclick="checkForm()">→</button>
+          <!-- </a> -->
   
         </div>
     </main>
