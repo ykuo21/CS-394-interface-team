@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-User Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+  <input type="text" id="usernameInput" placeholder="Enter username">
+  <input type="email" id="emailInput" placeholder="Enter email">
+  <input type="password" id="passwordInput" placeholder="Enter password">
+  <button onclick="checkForm()">Submit</button>
+  <div id="message" class="message"></div>
+</div>
+
+<script>
+  // List of valid users
+  const users = [
+    { username: "alice", email: "alice@email.com", password: "abc123" },
+    { username: "bob", email: "bob@email.com", password: "qwerty" },
+    { username: "charlie", email: "charlie@email.com", password: "pass456" }
+  ];
+
+  function checkForm() {
+    const username = document.getElementById("usernameInput").value.trim();
+    const email = document.getElementById("emailInput").value.trim();
+    const password = document.getElementById("passwordInput").value;
+    const message = document.getElementById("message");
+
+    const match = users.find(user =>
+      user.username === username &&
+      user.email === email &&
+      user.password === password
+    );
+
+    if (match) {
+      message.textContent = `Welcome, ${match.username}!`;
+      message.className = "message success";
+    } else {
+      message.textContent = "Login failed. Please check your username, email, and password.";
+      message.className = "message error";
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- UPDATE DROPDOWNS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dependent Dropdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    select {
+      padding: 10px;
+      margin: 10px 0;
+      width: 250px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Select Location</h2>
+
+  <label for="country">Country:</label>
+  <select id="country" onchange="updateCities()">
+    <option value="">-- Select Country --</option>
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+    <option value="japan">Japan</option>
+  </select>
+
+  <br>
+
+  <label for="city">City:</label>
+  <select id="city">
+    <option value="">-- Select City --</option>
+  </select>
+</div>
+
+<script>
+  const cityOptions = {
+    usa: ["New York", "Los Angeles", "Chicago"],
+    canada: ["Toronto", "Vancouver", "Montreal"],
+    japan: ["Tokyo", "Osaka", "Kyoto"]
+  };
+
+  function updateCities() {
+    const country = document.getElementById("country").value;
+    const citySelect = document.getElementById("city");
+
+    // Clear previous options
+    citySelect.innerHTML = '<option value="">-- Select City --</option>';
+
+    // Add new options
+    if (cityOptions[country]) {
+      cityOptions[country].forEach(city => {
+        const option = document.createElement("option");
+        option.value = city.toLowerCase();
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
