@@ -31,7 +31,7 @@ h2 {
     font-weight: bold;
     color: #05195A; 
     letter-spacing: 1px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 p.thank-you-text {

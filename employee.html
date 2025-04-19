@@ -14,87 +14,73 @@
             <img src="./assets/uic_logo.png" alt="uic logo">
             <div class="info">
 
-                <p id="header"><b>Student Information</b></p>
+                <p id="header"><b>Employee Information</b></p>
                 <div id="user_inputs">
+                    
 
-                    <form id="studentForm" action="thank_you.html" method="GET">
-
+                    <form id="userForm" action="thank_you.html" onsubmit="return validateForm()">
                         <div id="user_inputs">
-
                             <div class="column">
-                                <div class="row">
-        
-                                    <label for="degree">Select your degree level:</label>
-                                    <select id="degree" name="options" required>
-                                        <option value="" disabled selected>Select</option>
-                                        <option value="undergrad">Undergraduate</option>
-                                        <option value="grad">graduate</option>
-                                    </select>
-                                </div>
                                 
                                 <div class="row">
-                                    <label for="myDropdown">Select your college:</label>
-                                    <select id="myDropdown" name="college" required onchange="updateMajors()">
+                                    <label for="collegeDropdown">Select your Department:</label>
+                                    <select id="collegeDropdown" name="college" onchange="updateJobTitles()" required>
                                         <option value="" disabled selected>Select</option>
                                         <option value="cs">Computer Science</option>
                                         <option value="math">Mathematics</option>
                                         <option value="bs">Biological Sciences</option>
                                         <option value="lit">Literature</option>
                                         <option value="chem">Chemistry</option>
+                                        <option value="fac">Facilities department</option>
                                     </select>
                                 </div>
-                                
                                 <div class="row">
-                                    <label for="majorDropdown">Select your major:</label>
-                                    <select id="majorDropdown" name="major" required>
+                                    <label for="jobDropdown">Select your Job title:</label>
+                                    <select id="jobDropdown" name="job" required>
                                         <option value="" disabled selected>Select</option>
                                     </select>
                                 </div>
-                
-                                
                             </div>
-        
+                    
                             <div class="column">
-        
                                 <div class="row">
-                                    <p id="labels-right">Expected Graduation:</p>
-                                    <input type="text" required>
+                                    <p id="labels-right">Hire Year:</p>
+                                    <input type="text" id="hireYear" name="hireYear" required pattern="\d{4}" title="Enter a valid year (e.g. 2022)">
                                 </div>
-        
+                    
                                 <div class="row">
-        
                                     <label for="myDropdown">Select tools you need access to:</label>
                                     <select id="myDropdown" name="tools" required>
                                         <option value="" disabled selected>Select</option>
                                         <option value="gradescope">Gradescope</option>
                                         <option value="blackboard">Blackboard</option>
+                                        <option value="instructor-gradescope">Instructor Gradescope</option>
+                                        <option value="bio-db">Biological Sciences Research Database</option>
+                                        <option value="building-access">Building Access</option>
+                                        <option value="lab-systems">Lab Systems</option>
+                                        <option value="cluster-demand">Cluster On Demand</option>
+                                        <option value="financial-data">Financial Data</option>
                                         <option value="class-schedules">Class Schedules</option>
+                                        <option value="faculty-data">Faculty Data</option>
+                                        <option value="hr-data">HR Data</option>
+                                        <option value="scheduling-software">Scheduling Software</option>
+                                        <option value="instructor-blackboard">Instructor Blackboard</option>
+                                        <option value="facility-access">Facility Access</option>
+                                        <option value="chemical-db">Chemical Sciences Research Database</option>
                                     </select>
                                 </div>
-        
-                            
                             </div>
                         </div>
-
+                    
                         <button type="submit">→</button>
-
-
                     </form>
-                    
-
-                    
                 
                 </div>
 
             </div>
-            
-            
-            <!-- <a href="thank_you.html">
-                <button>→</button>
-              </a> -->
   
         </div>
     </main>
-    <script src="student.js"></script>
+    <script src="employee.js"></script>
   </body>
 </html>
