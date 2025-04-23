@@ -39,6 +39,14 @@
                                         <option value="" disabled selected>Select</option>
                                     </select>
                                 </div>
+
+                                <div class="row">
+                                    <div class="input-container">
+                                        <p id="labels-right">Enter role if it doesn't exist:</p>
+                                        <span class="error-message" id="errorHireYear"></span>
+                                    </div>
+                                    <input type="text" id="role" name="role"  >
+                                </div>
                             </div>
                     
                             <div class="column">
@@ -53,9 +61,9 @@
                                 </div>
                     
                                 <div class="row">
+                        
                                     <label for="myDropdown">Select tools you need access to:</label>
-                                    <select id="myDropdown" name="tools" required>
-                                        <option value="" disabled selected>Select</option>
+                                    <select id="myDropdown" name="tools[]" multiple="multiple" required style="width: 100%;">
                                         <option value="gradescope">Gradescope</option>
                                         <option value="blackboard">Blackboard</option>
                                         <option value="instructor-gradescope">Instructor Gradescope</option>
@@ -72,6 +80,8 @@
                                         <option value="facility-access">Facility Access</option>
                                         <option value="chemical-db">Chemical Sciences Research Database</option>
                                     </select>
+
+
                                 </div>
                             </div>
                         </div>

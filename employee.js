@@ -46,6 +46,16 @@ function updateJobTitles() {
     }
 }
 
+
+
+
+  $(document).ready(function() {
+    $('#myDropdown').select2({
+      placeholder: "Select tools",
+      allowClear: true
+    });
+  });
+
 function validateForm() {
     const college = document.getElementById('collegeDropdown').value;
     const job = document.getElementById('jobDropdown').value;

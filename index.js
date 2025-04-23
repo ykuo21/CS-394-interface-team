@@ -1,5 +1,5 @@
 const users = [
-    { firstName: "Kristine", lastName: "Ma", email: "kma28@uic.edu", netID: "kma28" },
+    { firstName: "Kristine", lastName: "Ma", email: "kma28@uic.edu", netID: "123456789" },
     // { username: "bob", email: "bob@email.com", password: "qwerty" },
     // { username: "charlie", email: "charlie@email.com", password: "pass456" }
   ];
@@ -97,7 +97,7 @@ const users = [
 
             if ((userMatch.netID !== netID) && (userMatch.firstName == firstName && userMatch.lastName == lastName && userMatch.email == email)){
                 netIDInput.classList.add("input-error");
-                document.getElementById("errorNetID").textContent = "Do you mean kma28?";
+                document.getElementById("errorNetID").textContent = "No match found for UIN";
             }
             else if (userMatch.netID !== netID) {
                 netIDInput.classList.add("input-error");
